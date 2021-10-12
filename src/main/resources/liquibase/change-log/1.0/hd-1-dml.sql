@@ -1,0 +1,1 @@
+INSERT INTO hd_users (id, hd_username, password, repeatable_password, roles) VALUES (1, 'marko', '123', '123', 'ROLE_ADMIN');

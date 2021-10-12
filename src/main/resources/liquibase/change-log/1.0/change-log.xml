@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="marko.uljarevic" id="hd-1" runOnChange="true">
+
+        <comment>Kreiranje user tabela</comment>
+
+        <sqlFile path="hd-1-ddl.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="hd-1-ddl-rollback.sql" relativeToChangelogFile="true"/>
+        </rollback>
+        <sqlFile path="hd-1-dml.sql" relativeToChangelogFile="true"/>
+
+    </changeSet>
+
+    <changeSet author="marko.uljarevic" id="version 1.0">
+        <tagDatabase tag="1.0"/>
+    </changeSet>
+
+</databaseChangeLog>
